@@ -1,5 +1,11 @@
 class Idea < ActiveRecord::Base
+  # ++
+  # associations
+  # --
+  has_and_belongs_to_many :tags
 
-validates :description, presence: true
-
+  # ++
+  # validations
+  # --
+  validates :description, presence: true
 end
