@@ -19,12 +19,12 @@ test:
   timeout: 5000
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   database: ideasnow
   encoding: utf8
   collation: utf8
-  username: root
-  password: root
+  username: ideas
+  password: toor
   host: localhost
   port: 3306
   pool: 5
