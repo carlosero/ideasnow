@@ -1,5 +1,6 @@
 Ideasnow::Application.routes.draw do
   resources :ideas
+  resources :tags, only: [:index]
   root 'ideas#index'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

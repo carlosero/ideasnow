@@ -14,4 +14,14 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require jquery.tokeninput
 //= require_tree .
+
+$(function() {
+
+  $("#idea_tag_tokens").tokenInput("/tags.json", {
+    crossDomain: false,
+    prePopulate: $("#idea_tag_tokens").data("pre"),
+        theme: "facebook",
+  });
+});

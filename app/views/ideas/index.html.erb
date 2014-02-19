@@ -5,8 +5,8 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:tags) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -14,8 +14,8 @@
   <tbody>
     <% @ideas.each do |idea| %>
       <tr>
-        <td><%= link_to idea.id, idea_path(idea) %></td>
         <td><%= idea.description %></td>
+        <td><%= idea.tags.map(&:name).join(", ") %></td>
         <td><%=l idea.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

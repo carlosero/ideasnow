@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ideasnow</title>
+  <title>ideasNow</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= bootstrap_flash %>
 
-  <div class="container">
     <%= nav_bar :fixed => :top, :responsive => true, :brand => 'ideasNow' do %>
       <% menu_group do %>
-        <%= menu_item "New Idea", new_idea_path %>
-        <%= menu_item "New Idea", new_idea_path %>
-        <%= menu_item "New Idea", new_idea_path %>
-        <%= menu_item "New Idea", new_idea_path %>
-        <%= menu_item "New Idea", new_idea_path %>
-        <%= menu_item "New Idea", new_idea_path %>
-        <%= menu_item "New Idea", new_idea_path %>
-        <%= menu_item "New Idea", new_idea_path %>
+        <%= menu_item "Ideas", ideas_path %>
         <%= menu_item "New Idea", new_idea_path %>
       <% end %>
     <% end %>
+
+  <div class="container">
     <div class="row">
-      <div class="span9">
+      <div id="main-container" class="span12">
+        <%= bootstrap_flash %>
         <%= yield %>
       </div>
-      <div class="span3">
-        <h2>About Us</h2>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et euismod erat, ut imperdiet tellus. Duis semper massa sit amet enim porta, a eleifend leo mollis. Duis quis iaculis lectus, sit amet rhoncus turpis. In eu risus nec odio porta lacinia. Etiam tellus elit, commodo non rhoncus vitae, pellentesque at nisi. Nulla adipiscing egestas felis. Sed hendrerit dui eget porttitor vulputate. Duis in scelerisque sem, pharetra molestie urna. Vestibulum elementum lobortis purus at sollicitudin. Nullam at tortor sed dolor accumsan sodales sed at justo. Cras felis nisl, gravida quis odio sit amet, vestibulum pellentesque urna. Quisque feugiat lorem id faucibus lacinia. Praesent eu augue et elit viverra porttitor.
-      </div>
+      
     </div>
   </div>
 
